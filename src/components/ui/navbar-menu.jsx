@@ -31,7 +31,7 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_0.5rem)] left-1/2 transform -translate-x-1/2">
+            <div className="absolute top-[calc(100%_+_1.5rem)] left-1/2 transform -translate-x-1/2">
               {/* Invisible buffer zone to prevent dropdown from closing */}
               <div className="h-8 w-full absolute -top-8 left-0"></div>
               <motion.div

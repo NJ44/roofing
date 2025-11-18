@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Timeline } from "./ui/timeline";
 
 const ServicesTimeline = () => {
@@ -124,11 +125,18 @@ const ServicesTimeline = () => {
   ];
 
   return (
-    <section id="services" className="min-h-screen w-full bg-gray-50">
+    <motion.section 
+      id="services" 
+      className="min-h-screen w-full bg-gray-50"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="w-full">
         <Timeline data={data} />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

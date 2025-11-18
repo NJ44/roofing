@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { scrollToElement } from '../../hooks/useLenis'
 import { config } from '../../config'
 
 const PeriodontalTreatment = () => {
@@ -41,10 +42,7 @@ const PeriodontalTreatment = () => {
             href="#contact"
             onClick={(e) => {
               e.preventDefault()
-              const element = document.querySelector('#contact')
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' })
-              }
+              scrollToElement('#contact', { offset: -100 })
             }}
             className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           >

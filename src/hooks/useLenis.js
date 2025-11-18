@@ -1,0 +1,66 @@
+import { useEffect } from 'react'
+import Lenis from 'lenis'
+
+// Global Lenis instance to access from anywhere
+let lenisInstance = null
+
+export function useLenis() {
+  useEffect(() => {
+    // Initialize Lenis with smooth scroll settings
+    const lenis = new Lenis({
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.15,
+      wheelMultiplier: 0.8,
+      touchMultiplier: 1.2,
+      infinite: false,
+    })
+
+    // Store instance globally
+    lenisInstance = lenis
+
+    // Animation loop using requestAnimationFrame
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    // Cleanup on unmount
+    return () => {
+      lenis.destroy()
+      lenisInstance = null
+    }
+  }, [])
+}
+
+// Helper function to scroll to element using Lenis
+export function scrollToElement(selector, options = {}) {
+  if (lenisInstance) {
+    const element = typeof selector === 'string' 
+      ? document.querySelector(selector) 
+      : selector
+    
+    if (element) {
+      lenisInstance.scrollTo(element, {
+        duration: options.duration || 1.5,
+        offset: options.offset || 0,
+        ...options
+      })
+    }
+  } else {
+    // Fallback to native scrollIntoView if Lenis not initialized
+    const element = typeof selector === 'string' 
+      ? document.querySelector(selector) 
+      : selector
+    
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: options.block || 'start'
+      })
+    }
+  }
+}
+

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -23,9 +23,18 @@ import DentalImplants from './pages/services/DentalImplants'
 import EmergencyCare from './pages/services/EmergencyCare'
 import Orthodontics from './pages/services/Orthodontics'
 import PeriodontalTreatment from './pages/services/PeriodontalTreatment'
+import { useLenis } from './hooks/useLenis'
 import { config } from './config'
 
 function HomePage() {
+  // Add smooth-scroll class to body for CSS support
+  useEffect(() => {
+    document.body.classList.add('smooth-scroll')
+    return () => {
+      document.body.classList.remove('smooth-scroll')
+    }
+  }, [])
+
   return (
     <>
       <Hero />
@@ -38,6 +47,8 @@ function HomePage() {
 }
 
 function App() {
+  const location = useLocation()
+
   useEffect(() => {
     // Set CSS custom properties from config
     if (config.PRIMARY_COLOR && !config.PRIMARY_COLOR.startsWith('{{')) {
@@ -47,6 +58,9 @@ function App() {
       document.documentElement.style.setProperty('--accent-color', config.ACCENT_COLOR)
     }
   }, [])
+
+  // Initialize Lenis smooth scrolling for all pages
+  useLenis()
 
   return (
     <>

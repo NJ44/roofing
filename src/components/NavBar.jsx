@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+import { scrollToElement } from "../hooks/useLenis";
 import { cn } from "../lib/utils";
 import { config } from "../config";
 
@@ -19,11 +20,8 @@ function NavBar({ className }) {
 
   const scrollToSection = (href) => {
     if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setActive(null);
-      }
+      scrollToElement(href, { offset: -100 });
+      setActive(null);
     }
   };
 
@@ -168,7 +166,7 @@ function NavBar({ className }) {
         </div>
 
         {/* Book Now Button - positioned on the right */}
-        <div className="flex items-center mr-4">
+        <div className="flex items-center ml-auto mr-0">
           <a
             href="#contact"
             onClick={(e) => {

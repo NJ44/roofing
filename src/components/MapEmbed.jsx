@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { config } from '../config'
 
 const MapEmbed = () => {
@@ -11,16 +12,34 @@ const MapEmbed = () => {
   )}`
 
   return (
-    <section className="py-20 bg-white">
+    <motion.section 
+      className="py-20 bg-white"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
           <p className="text-xl text-gray-600">
             Visit our office in {config.CITY}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-lg">
             <iframe
               src={mapSrc}
@@ -71,9 +90,9 @@ const MapEmbed = () => {
               Open in Google Maps
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

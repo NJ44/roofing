@@ -1,25 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { InteractiveHoverButton } from '../../components/ui/interactive-hover-button'
+import { scrollToElement } from '../../hooks/useLenis'
 import { config } from '../../config'
 
 const RoutineCleaningsExams = () => {
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="mb-8">
+        <motion.div 
+          className="mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <img
             src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=600&fit=crop"
             alt="Routine Cleanings & Exams"
             className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
           />
-        </div>
+        </motion.div>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <motion.h1 
+          className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           Routine Cleanings & Exams
-        </h1>
+        </motion.h1>
 
-        <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+        <motion.div 
+          className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           <p className="mb-4">
             Regular dental cleanings and examinations are the foundation of excellent oral health. Our comprehensive checkups include a thorough examination of your teeth, gums, and oral tissues, along with professional cleaning to remove plaque and tartar buildup. We use advanced diagnostic tools including digital X-rays and intraoral cameras to detect potential issues early, before they become more serious problems.
           </p>
@@ -35,17 +55,20 @@ const RoutineCleaningsExams = () => {
           <p className="mb-6">
             We create a comfortable, stress-free environment for your routine visits, ensuring you feel relaxed and well-informed throughout your appointment. Schedule your appointment today and take the first step toward achieving and maintaining optimal oral health.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-8 flex gap-4">
+        <motion.div 
+          className="mt-8 flex gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <a
             href="#contact"
             onClick={(e) => {
               e.preventDefault()
-              const element = document.querySelector('#contact')
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' })
-              }
+              scrollToElement('#contact', { offset: -100 })
             }}
             className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           >
@@ -57,7 +80,7 @@ const RoutineCleaningsExams = () => {
           >
             ← Back to General Dentistry
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

@@ -24,6 +24,11 @@ body {
   color: #333;
 }
 
+/* Smooth scroll support */
+body.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -71,5 +76,125 @@ html {
   .animate-fade-in-delay {
     animation: none;
   }
+}
+
+/* Retell AI Widget Styling - Professional & Modern */
+#retell-widget-container,
+[data-retell-widget],
+iframe[src*="retellai.com"] {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* Style the widget button/bubble */
+#retell-widget-container button,
+[data-retell-widget] button,
+.retell-widget-button {
+  border-radius: 50px !important;
+  box-shadow: 0 4px 20px rgba(0, 102, 204, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+}
+
+#retell-widget-container button:hover,
+[data-retell-widget] button:hover,
+.retell-widget-button:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 30px rgba(0, 102, 204, 0.4) !important;
+}
+
+/* Style the chat window */
+#retell-widget-container iframe,
+[data-retell-widget] iframe {
+  border-radius: 20px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+  overflow: hidden !important;
+  max-height: 500px !important;
+  height: 500px !important;
+}
+
+/* Reduce chat window height on mobile */
+@media (max-width: 768px) {
+  #retell-widget-container iframe,
+  [data-retell-widget] iframe {
+    max-height: 400px !important;
+    height: 400px !important;
+  }
+}
+
+/* Style popup messages */
+.retell-popup,
+[class*="retell-popup"],
+[class*="retell-message"] {
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+  padding: 12px 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Modern gradient background for widget button */
+#retell-widget-container button::before,
+[data-retell-widget] button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(135deg, #0066CC, #004499);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#retell-widget-container button:hover::before,
+[data-retell-widget] button:hover::before {
+  opacity: 1;
+}
+
+/* Animation for widget appearance */
+@keyframes widgetFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+#retell-widget-container,
+[data-retell-widget] {
+  animation: widgetFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #retell-widget-container button,
+  [data-retell-widget] button {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  
+  #retell-widget-container iframe,
+  [data-retell-widget] iframe {
+    border-radius: 16px !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+}
+
+/* Ensure widget doesn't interfere with page content */
+#retell-widget-container,
+[data-retell-widget] {
+  z-index: 9999 !important;
+  pointer-events: auto !important;
 }
 

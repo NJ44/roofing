@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const faqs = [
   {
@@ -76,27 +77,53 @@ const FAQ = () => {
   }
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <motion.section 
+      id="faq" 
+      className="py-20 bg-white"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
           <p className="text-xl text-gray-600">
             Everything you need to know about our services
           </p>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-          {faqs.map((faq) => (
-            <FAQItem
+        <motion.div 
+          className="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {faqs.map((faq, index) => (
+            <motion.div
               key={faq.id}
-              faq={faq}
-              isOpen={openId === faq.id}
-              onToggle={() => handleToggle(faq.id)}
-            />
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+            >
+              <FAQItem
+                faq={faq}
+                isOpen={openId === faq.id}
+                onToggle={() => handleToggle(faq.id)}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

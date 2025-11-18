@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import LeadForm from './LeadForm'
+import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 
 const Hero = () => {
@@ -56,10 +57,7 @@ const Hero = () => {
                 className="bg-accent text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
                 onClick={(e) => {
                   e.preventDefault();
-                  const element = document.querySelector('#contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  scrollToElement('#contact', { offset: -100 });
                 }}
               >
                 Request appointment
@@ -69,10 +67,7 @@ const Hero = () => {
                 className="bg-white text-primary px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
                 onClick={(e) => {
                   e.preventDefault();
-                  const element = document.querySelector('#services');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  scrollToElement('#services', { offset: -100 });
                 }}
               >
                 Our Services
