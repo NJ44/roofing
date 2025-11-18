@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { InteractiveHoverButton } from '../components/ui/interactive-hover-button'
 import { config } from '../config'
 
 const CosmeticWhitening = () => {
@@ -78,12 +79,13 @@ const CosmeticWhitening = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Professional teeth whitening is one of the most popular and effective ways to dramatically brighten your smile. Over time, our teeth naturally become discolored due to aging, consumption of staining foods and beverages like coffee, tea, and wine, smoking, and other factors. Our in-office whitening treatments use professional-grade bleaching agents that are far more effective than over-the-counter products, delivering dramatic results in just one visit. The procedure is safe, comfortable, and supervised by our experienced dental team to ensure optimal results. For patients who prefer the convenience of at-home treatment, we also offer custom-fitted whitening trays with professional-grade gel that you can use in the comfort of your own home, allowing you to whiten your teeth at your own pace. We take impressions of your teeth to create trays that fit perfectly, ensuring even whitening and preventing gel from irritating your gums. Both in-office and at-home whitening options can lighten your teeth by several shades, giving you a noticeably brighter, more youthful smile. We'll discuss your goals and lifestyle to recommend the best whitening option for you, and provide guidance on maintaining your results long-term.
                 </p>
-                <Link
+                <InteractiveHoverButton
+                  as={Link}
                   to="/cosmetic-whitening/teeth-whitening"
-                  className="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
-                >
-                  Learn More →
-                </Link>
+                  text="Learn More"
+                  variant="primary"
+                  className="px-6 py-2"
+                />
               </div>
             </div>
 

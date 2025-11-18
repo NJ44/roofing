@@ -54,12 +54,26 @@ const Hero = () => {
               <a
                 href="#contact"
                 className="bg-accent text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#contact');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Request appointment
               </a>
               <a
                 href="#services"
                 className="bg-white text-primary px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#services');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 Our Services
               </a>

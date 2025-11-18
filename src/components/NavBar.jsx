@@ -168,7 +168,7 @@ function NavBar({ className }) {
         </div>
 
         {/* Book Now Button - positioned on the right */}
-        <div className="flex items-center">
+        <div className="flex items-center mr-4">
           <a
             href="#contact"
             onClick={(e) => {

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { InteractiveHoverButton } from '../components/ui/interactive-hover-button'
 import { config } from '../config'
 
 const GeneralDentistry = () => {
@@ -78,12 +79,13 @@ const GeneralDentistry = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Regular dental cleanings and examinations are the foundation of excellent oral health. Our comprehensive checkups include a thorough examination of your teeth, gums, and oral tissues, along with professional cleaning to remove plaque and tartar buildup. We use advanced diagnostic tools including digital X-rays and intraoral cameras to detect potential issues early, before they become more serious problems. During your visit, we'll assess your overall oral health, screen for oral cancer, check for signs of gum disease, and evaluate your bite and jaw function. Our dental hygienists perform deep cleanings using ultrasonic scalers and specialized tools to remove hardened plaque and surface stains that regular brushing cannot eliminate. We also provide personalized oral hygiene education, demonstrating proper brushing and flossing techniques tailored to your specific needs. Regular preventive care visits every six months help maintain healthy teeth and gums, prevent cavities, and catch problems early when treatment is simpler and more affordable. We create a comfortable, stress-free environment for your routine visits, ensuring you feel relaxed and well-informed throughout your appointment.
                 </p>
-                <Link
+                <InteractiveHoverButton
+                  as={Link}
                   to="/general-dentistry/routine-cleanings-exams"
-                  className="inline-block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
-                >
-                  Learn More →
-                </Link>
+                  text="Learn More"
+                  variant="primary"
+                  className="px-6 py-2"
+                />
               </div>
             </div>
 

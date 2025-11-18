@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { InteractiveHoverButton } from '../../components/ui/interactive-hover-button'
 import { config } from '../../config'
 
 const TeethWhitening = () => {
