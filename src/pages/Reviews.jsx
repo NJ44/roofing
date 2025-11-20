@@ -4,8 +4,30 @@ import { config, sampleReviews } from '../config'
 import { TestimonialsColumn } from '../components/ui/testimonials-columns-1'
 
 const Reviews = () => {
-  // Use sample reviews data if available
+  // Convert sample reviews to testimonials format
   const reviews = config.GOOGLE_REVIEWS_DATA || sampleReviews
+  
+  // Map reviews to testimonials format with images
+  const testimonialImages = [
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=faces",
+    "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=100&h=100&fit=crop&crop=faces",
+  ]
+  
+  const testimonials = reviews.map((review, index) => ({
+    text: review.text,
+    image: testimonialImages[index % testimonialImages.length],
+    name: review.author,
+    role: "Patient",
+    rating: review.rating || 5,
+    date: review.date ? new Date(review.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : undefined,
+  }))
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { InteractiveHoverButton } from '../components/ui/interactive-hover-button'
 import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 
@@ -120,13 +119,12 @@ const SpecializedCare = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Dental implants represent one of the most significant advances in modern dentistry, offering a permanent solution for missing teeth that closely mimics the look, feel, and function of natural teeth. Unlike traditional bridges or dentures, implants are surgically placed into the jawbone, where they fuse with the bone tissue through a process called osseointegration. This creates a stable foundation for replacement teeth that can last a lifetime with proper care. The implant process typically involves multiple stages, beginning with a comprehensive evaluation to assess your bone density and oral health. If needed, bone grafting may be performed to ensure adequate support for the implant. Once the implant is placed, a healing period allows the bone to integrate with the implant. After healing, an abutment is attached to the implant, and a custom crown, bridge, or denture is fabricated to complete the restoration. Our implant specialists have extensive training and experience in implant placement, working closely with each patient to develop personalized treatment plans. We use only the highest quality implant systems and work with skilled dental laboratories to create restorations that perfectly match your natural teeth. Dental implants not only restore your smile but also preserve jawbone health and prevent the shifting of adjacent teeth.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/specialized-care/dental-implants"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -148,13 +146,12 @@ const SpecializedCare = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Dental emergencies can happen at any time, and we're committed to providing prompt, effective care when you need it most. Whether you're experiencing severe toothache, have knocked out or broken a tooth, lost a filling or crown, or have an abscess, our emergency dental services are designed to provide immediate relief and prevent further complications. We understand that dental emergencies can be painful and stressful, which is why we maintain flexible scheduling to accommodate urgent cases. Our team is trained to handle a wide range of dental emergencies with compassion and efficiency, ensuring you receive the care you need when every minute counts. Common dental emergencies we treat include severe toothaches, dental trauma, knocked-out teeth, broken or chipped teeth, lost fillings or crowns, abscesses, and other urgent conditions. When you call with a dental emergency, we'll assess your situation and provide guidance on immediate steps you can take before arriving at our office. We work quickly to diagnose and treat the problem, providing immediate relief and preventing further complications. Our goal is to get you out of pain as quickly as possible while preserving your oral health and preventing the need for more extensive treatment later.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/specialized-care/emergency-care"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -176,13 +173,12 @@ const SpecializedCare = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Orthodontic treatment has evolved significantly in recent years, and we offer both traditional braces and modern clear aligner systems to straighten teeth and correct bite issues. Whether you're a teenager or an adult seeking orthodontic treatment, our orthodontic specialists will evaluate your specific needs and recommend the most appropriate treatment option. Traditional metal braces remain highly effective for complex cases, providing precise control over tooth movement and the ability to address severe misalignments. Modern braces are smaller and more comfortable than ever before, and we offer ceramic braces that blend with your teeth for a more discreet appearance. Clear aligner systems offer a nearly invisible alternative for many patients, allowing you to straighten your teeth without the appearance of traditional braces. These custom-made, removable aligners gradually move your teeth into the desired position, and you can remove them for eating, brushing, and special occasions. Orthodontic treatment not only improves the appearance of your smile but also enhances oral function, makes teeth easier to clean, and reduces your risk of cavities and gum disease. We provide retainers and follow-up care to ensure your results are maintained long-term, helping you enjoy your beautiful, straight smile for years to come.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/specialized-care/orthodontics"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -204,13 +200,12 @@ const SpecializedCare = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Periodontal treatment addresses gum disease, a common condition that affects the tissues supporting your teeth. Left untreated, gum disease can lead to tooth loss and has been linked to other serious health conditions including heart disease, diabetes, and respiratory problems. Our periodontal specialists provide comprehensive gum disease treatment, from non-surgical deep cleanings to advanced surgical procedures when necessary. The treatment approach depends on the severity of your condition, and we begin with a thorough evaluation to assess the extent of the disease. For early-stage gum disease, we provide scaling and root planing, which involves deep cleaning below the gumline to remove plaque and tartar, and smoothing the root surfaces to promote healing. We may also use antimicrobial treatments to eliminate bacteria and promote gum health. For more advanced cases, we offer advanced periodontal therapies including laser treatment, which can remove diseased tissue while promoting regeneration of healthy gum tissue. Surgical procedures may be necessary for severe cases to restore gum health and prevent further damage. We work closely with patients to develop effective home care routines and provide ongoing maintenance to prevent disease recurrence. Regular periodontal maintenance visits are essential for managing gum disease and preventing its progression.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/specialized-care/periodontal-treatment"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
           </div>

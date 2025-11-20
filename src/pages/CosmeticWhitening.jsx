@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { InteractiveHoverButton } from '../components/ui/interactive-hover-button'
 import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 
@@ -120,13 +119,12 @@ const CosmeticWhitening = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Professional teeth whitening is one of the most popular and effective ways to dramatically brighten your smile. Over time, our teeth naturally become discolored due to aging, consumption of staining foods and beverages like coffee, tea, and wine, smoking, and other factors. Our in-office whitening treatments use professional-grade bleaching agents that are far more effective than over-the-counter products, delivering dramatic results in just one visit. The procedure is safe, comfortable, and supervised by our experienced dental team to ensure optimal results. For patients who prefer the convenience of at-home treatment, we also offer custom-fitted whitening trays with professional-grade gel that you can use in the comfort of your own home, allowing you to whiten your teeth at your own pace. We take impressions of your teeth to create trays that fit perfectly, ensuring even whitening and preventing gel from irritating your gums. Both in-office and at-home whitening options can lighten your teeth by several shades, giving you a noticeably brighter, more youthful smile. We'll discuss your goals and lifestyle to recommend the best whitening option for you, and provide guidance on maintaining your results long-term.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/cosmetic-whitening/teeth-whitening"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -148,13 +146,12 @@ const CosmeticWhitening = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Dental veneers represent the gold standard in cosmetic dentistry for transforming smiles. These thin, custom-made shells are bonded to the front surface of your teeth, effectively covering imperfections such as chips, cracks, gaps, discoloration, or misalignment. Made from high-quality porcelain or composite materials, veneers are designed to match the natural translucency and color of your teeth, creating a seamless, beautiful appearance that looks completely natural. The veneer process begins with a comprehensive consultation where we discuss your goals and examine your teeth to determine if veneers are the right solution for you. We then prepare your teeth by removing a small amount of enamel to make room for the veneers, take detailed impressions, and send them to a skilled dental laboratory where your custom veneers are crafted. During the fabrication period, temporary veneers protect your prepared teeth. Once your permanent veneers are ready, we carefully bond them to your teeth using a strong adhesive, ensuring perfect fit and alignment. The result is a dramatically improved smile that can last for many years with proper care. Veneers are stain-resistant and durable, making them an excellent long-term investment in your smile's appearance.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/cosmetic-whitening/dental-veneers"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -176,13 +173,12 @@ const CosmeticWhitening = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Dental bonding is a versatile and affordable cosmetic procedure that can quickly address minor imperfections in your smile. Using tooth-colored composite resin, we can repair chips, close small gaps, reshape teeth, cover stains, and improve the overall appearance of your teeth. The bonding material is carefully selected to match your natural tooth color and translucency, then sculpted and polished to blend seamlessly with your existing teeth. The procedure is typically completed in a single visit and requires minimal preparation of the tooth surface. We begin by selecting the perfect shade of composite resin to match your natural teeth, then apply a conditioning liquid to help the bonding material adhere. The resin is applied, shaped, and hardened with a special light, then polished to a natural-looking finish. Dental bonding is an excellent solution for minor cosmetic concerns and can be easily maintained or replaced as needed. While bonding may not be as durable as veneers, it provides an effective and affordable way to improve your smile's appearance without the need for extensive tooth preparation. The procedure is comfortable, quick, and can make a significant difference in your smile's appearance.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/cosmetic-whitening/dental-bonding"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -204,13 +200,12 @@ const CosmeticWhitening = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   A complete smile makeover is a comprehensive cosmetic treatment plan that addresses multiple aspects of your smile to create a harmonious, balanced, and beautiful result. This personalized approach combines various cosmetic procedures including whitening, veneers, bonding, gum contouring, and sometimes orthodontic treatment to achieve your dream smile. The process begins with an in-depth consultation where we discuss your goals, examine your current smile, and use digital imaging to show you potential results. We consider factors such as your facial features, skin tone, lip shape, and personal preferences to design a smile that enhances your natural beauty. Our cosmetic dentists work closely with you throughout the process, explaining each step and ensuring you're comfortable with the treatment plan. A smile makeover may involve multiple visits over several months, but the transformation can be truly remarkable. We use advanced technology including digital smile design to plan your makeover and ensure optimal results. Whether you're preparing for a special event or simply want to improve your everyday confidence, a smile makeover can give you the beautiful, natural-looking smile you've always wanted. The investment in a smile makeover can significantly boost your self-esteem and improve your quality of life.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/cosmetic-whitening/smile-makeover"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
           </div>

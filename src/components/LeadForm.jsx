@@ -107,7 +107,7 @@ const LeadForm = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-3 md:p-4 max-w-sm mx-auto">
+    <div id="appointment-form" className="bg-white rounded-2xl shadow-2xl p-3 md:p-4 max-w-sm mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">Request an Appointment</h2>
       
       {submitStatus === 'success' ? (

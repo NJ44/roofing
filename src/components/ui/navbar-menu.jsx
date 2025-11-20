@@ -112,7 +112,8 @@ export const ProductItem = ({
     <a 
       href={href} 
       onClick={handleClick} 
-      className="flex space-x-2 p-3 rounded-lg transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-900 group"
+      className="flex space-x-2 p-3 rounded-lg transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-900 group"
+      style={{ transform: 'none' }}
     >
       <img
         src={src}
@@ -120,8 +121,9 @@ export const ProductItem = ({
         height={60}
         alt={title}
         className="flex-shrink-0 rounded-md shadow-2xl object-cover w-20 h-12"
+        style={{ transform: 'none' }}
       />
-      <div>
+      <div style={{ transform: 'none' }}>
         <h4 className="text-sm font-bold mb-0.5 text-black dark:text-white transition-colors duration-200 group-hover:text-primary">
           {title}
         </h4>

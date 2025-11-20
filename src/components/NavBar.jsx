@@ -112,7 +112,7 @@ function NavBar({ className }) {
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="About">
+          <MenuItem setActive={setActive} active={active} item="About Us">
             <div className="text-sm grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Our Practice"
@@ -145,32 +145,16 @@ function NavBar({ className }) {
             </div>
           </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="Contact">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink
-                href="#contact"
-                onClick={() => scrollToSection("#contact")}
-              >
-                Book Appointment
-              </HoveredLink>
-              <HoveredLink
-                href={`tel:${config.PHONE}`}
-              >
-                Call Us: {config.PHONE}
-              </HoveredLink>
-              <HoveredLink
-                href={`mailto:${config.EMAIL}`}
-              >
-                Email: {config.EMAIL}
-              </HoveredLink>
-              <HoveredLink
-                href="#contact"
-                onClick={() => scrollToSection("#contact")}
-              >
-                Visit Our Office
-              </HoveredLink>
-            </div>
-          </MenuItem>
+          <a
+            href="/contact"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick("/contact");
+            }}
+            className="cursor-pointer text-black hover:text-primary font-medium text-sm transition-colors duration-200"
+          >
+            Contact
+          </a>
 
           <Link
             to="/blog"
@@ -187,10 +171,14 @@ function NavBar({ className }) {
         {/* Desktop Book Now Button - hidden on mobile */}
         <div className="hidden md:flex items-center ml-auto" style={{ transform: 'translateX(20px)' }}>
           <a
-            href="#contact"
+            href="#appointment-form"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("#contact");
+              if (window.location.pathname === '/') {
+                scrollToSection("#appointment-form");
+              } else {
+                window.location.href = '/#appointment-form';
+              }
             }}
             className="bg-primary text-white px-4 py-1.5 rounded-lg font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap text-sm"
           >
@@ -255,7 +243,7 @@ function NavBar({ className }) {
 
             {/* About Section */}
             <div>
-              <h3 className="text-lg font-semibold text-black mb-3">About</h3>
+              <h3 className="text-lg font-semibold text-black mb-3">About Us</h3>
               <div className="space-y-2">
                 <a
                   href="#home"
@@ -305,26 +293,14 @@ function NavBar({ className }) {
               <h3 className="text-lg font-semibold text-black mb-3">Contact</h3>
               <div className="space-y-2">
                 <a
-                  href="#contact"
+                  href="/contact"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleMobileLinkClick(() => scrollToSection("#contact"));
+                    handleMobileLinkClick(() => handleLinkClick("/contact"));
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Book Appointment
-                </a>
-                <a
-                  href={`tel:${config.PHONE}`}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Call Us: {config.PHONE}
-                </a>
-                <a
-                  href={`mailto:${config.EMAIL}`}
-                  className="block py-2 text-black hover:text-primary transition-colors"
-                >
-                  Email: {config.EMAIL}
+                  Contact Us
                 </a>
               </div>
             </div>
@@ -346,10 +322,16 @@ function NavBar({ className }) {
             {/* Mobile Book Now Button */}
             <div className="pt-4">
               <a
-                href="#contact"
+                href="#appointment-form"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleMobileLinkClick(() => scrollToSection("#contact"));
+                  handleMobileLinkClick(() => {
+                    if (window.location.pathname === '/') {
+                      scrollToSection("#appointment-form");
+                    } else {
+                      window.location.href = '/#appointment-form';
+                    }
+                  });
                 }}
                 className="block w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors"
               >

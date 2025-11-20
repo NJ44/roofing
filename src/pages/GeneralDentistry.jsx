@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { InteractiveHoverButton } from '../components/ui/interactive-hover-button'
 import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 
@@ -114,13 +113,12 @@ const GeneralDentistry = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Regular dental cleanings and examinations are the foundation of excellent oral health. Our comprehensive checkups include a thorough examination of your teeth, gums, and oral tissues, along with professional cleaning to remove plaque and tartar buildup. We use advanced diagnostic tools including digital X-rays and intraoral cameras to detect potential issues early, before they become more serious problems. During your visit, we'll assess your overall oral health, screen for oral cancer, check for signs of gum disease, and evaluate your bite and jaw function. Our dental hygienists perform deep cleanings using ultrasonic scalers and specialized tools to remove hardened plaque and surface stains that regular brushing cannot eliminate. We also provide personalized oral hygiene education, demonstrating proper brushing and flossing techniques tailored to your specific needs. Regular preventive care visits every six months help maintain healthy teeth and gums, prevent cavities, and catch problems early when treatment is simpler and more affordable. We create a comfortable, stress-free environment for your routine visits, ensuring you feel relaxed and well-informed throughout your appointment.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/general-dentistry/routine-cleanings-exams"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -142,13 +140,12 @@ const GeneralDentistry = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   When cavities or damage occur, our expert team provides high-quality dental fillings and restorations that restore both function and aesthetics. We use modern tooth-colored composite materials that blend seamlessly with your natural teeth, eliminating the need for unsightly metal fillings. Our restoration process begins with careful removal of decayed or damaged tooth structure, followed by precise placement of the filling material that matches your tooth's natural color and translucency. We also offer ceramic inlays and onlays for larger restorations that provide superior durability and aesthetics. These custom-made restorations are fabricated in a dental laboratory and bonded to your tooth, offering a long-lasting solution that preserves more of your natural tooth structure. For severely damaged teeth, we provide dental crowns that completely cover and protect the tooth while restoring its natural appearance. All our restorative procedures are performed with attention to detail, ensuring proper bite alignment and comfortable function. We use local anesthesia to ensure your complete comfort throughout the procedure, and our modern techniques minimize discomfort and recovery time.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/general-dentistry/fillings-restorations"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -170,13 +167,12 @@ const GeneralDentistry = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Root canal therapy is a highly effective procedure that saves infected or severely damaged teeth from extraction. Despite its reputation, modern root canal treatment is comfortable and straightforward, thanks to advanced techniques and effective anesthesia. The procedure involves removing the infected or damaged pulp from inside the tooth, thoroughly cleaning and disinfecting the root canals, and then sealing them to prevent reinfection. We use rotary instruments and advanced irrigation techniques to ensure complete removal of bacteria and debris from the root canal system. After the root canal is cleaned and sealed, the tooth is typically restored with a crown to protect it and restore its full function. Saving your natural tooth through root canal therapy is always preferable to extraction, as it maintains your jawbone health, preserves your natural bite, and prevents the need for more extensive replacement procedures like bridges or implants. Our team takes time to explain the procedure, answer your questions, and ensure you're comfortable throughout the process. We use digital imaging to precisely locate and treat all root canals, ensuring the best possible outcome for your tooth.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/general-dentistry/root-canal-therapy"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
 
@@ -198,13 +194,12 @@ const GeneralDentistry = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Gum disease, also known as periodontal disease, is a common condition that affects the tissues supporting your teeth. Left untreated, it can lead to tooth loss and has been linked to other serious health conditions including heart disease and diabetes. Our comprehensive gum disease treatment begins with a thorough evaluation to assess the extent of the disease. For early-stage gum disease, we provide deep cleanings called scaling and root planing, which remove plaque and tartar from below the gumline and smooth the root surfaces to promote healing. We may also use antimicrobial treatments to eliminate bacteria and promote gum health. For more advanced cases, we offer advanced periodontal therapies including laser treatment, which can remove diseased tissue while promoting regeneration of healthy gum tissue. We work closely with patients to develop effective home care routines and provide ongoing maintenance to prevent disease recurrence. Regular periodontal maintenance visits are essential for managing gum disease and preventing its progression. Our goal is to restore and maintain healthy gums that support your teeth for a lifetime, ensuring your long-term oral health and overall well-being.
                 </p>
-                <InteractiveHoverButton
-                  as={Link}
+                <Link
                   to="/general-dentistry/gum-disease-treatment"
-                  text="Learn More"
-                  variant="primary"
-                  className="px-6 py-2"
-                />
+                  className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
+                >
+                  Learn More
+                </Link>
               </div>
             </motion.div>
           </div>
