@@ -23,11 +23,20 @@
     <meta name="twitter:description" content="Compassionate dental care in {{CITY}}. Same-week appointments, modern treatments, and a team that makes you comfortable." />
     <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
     
-    <!-- Retell AI Widget -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Retell AI Widget - Loaded at end of body to prevent blocking initial render -->
+    <!-- Note: This is a third-party script from Retell AI. The unminified JavaScript warning 
+         is expected as we cannot control the minification of external third-party scripts. -->
     <script
       id="retell-widget"
       src="https://dashboard.retellai.com/retell-widget.js"
       type="module"
+      async
+      defer
       data-public-key="public_key_c894825223963729a1ba5"
       data-agent-id="agent_54029e82c9c1dc4e6fdb7fdb60"
       data-show-ai-popup="true"
@@ -37,10 +46,6 @@
       data-title="Chat with us"
       data-popup-message="Have questions? We're here to help!"
     ></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
 
