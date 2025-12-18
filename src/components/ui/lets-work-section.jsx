@@ -8,6 +8,7 @@ export function LetsWorkTogether() {
   const [isClicked, setIsClicked] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [isButtonHovered, setIsButtonHovered] = useState(false)
+  const [isQuoteButtonHovered, setIsQuoteButtonHovered] = useState(false)
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -20,6 +21,11 @@ export function LetsWorkTogether() {
 
   const handleBookCall = () => {
     window.open("https://cal.com/jatin-yadav05/15min", "_blank")
+  }
+
+  const handleGetQuote = () => {
+    // Add your quote form/page link here
+    window.open("#contact", "_self")
   }
 
   return (
@@ -53,42 +59,29 @@ export function LetsWorkTogether() {
                 transitionDelay: "200ms",
               }}
             >
-              Let's talk
+              Let's meet
             </h3>
           </div>
 
-          {/* Book a call button */}
-          <button
-            onClick={handleBookCall}
-            onMouseEnter={() => setIsButtonHovered(true)}
-            onMouseLeave={() => setIsButtonHovered(false)}
-            className="group relative flex items-center gap-4 transition-all duration-500 cursor-pointer"
-            style={{
-              transform: showSuccess
-                ? isButtonHovered
-                  ? "translateY(0) scale(1.02)"
-                  : "translateY(0) scale(1)"
-                : "translateY(15px) scale(1)",
-              opacity: showSuccess ? 1 : 0,
-              transitionDelay: "150ms",
-            }}
-          >
-            {/* Left line */}
-            <div
-              className="h-px w-8 bg-border transition-all duration-500 sm:w-12"
-              style={{
-                transform: isButtonHovered ? "scaleX(0)" : "scaleX(1)",
-                opacity: isButtonHovered ? 0 : 0.5,
-              }}
-            />
-
-            {/* Button content */}
-            <div
-              className="relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4"
+          {/* Buttons container */}
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            {/* Book an appointment button */}
+            <button
+              onClick={handleBookCall}
+              onMouseEnter={() => setIsButtonHovered(true)}
+              onMouseLeave={() => setIsButtonHovered(false)}
+              className="group relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4 cursor-pointer"
               style={{
                 borderColor: isButtonHovered ? "var(--foreground)" : "var(--border)",
                 backgroundColor: isButtonHovered ? "var(--foreground)" : "transparent",
                 boxShadow: isButtonHovered ? "0 0 30px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.08)" : "none",
+                transform: showSuccess
+                  ? isButtonHovered
+                    ? "translateY(0) scale(1.02)"
+                    : "translateY(0) scale(1)"
+                  : "translateY(15px) scale(1)",
+                opacity: showSuccess ? 1 : 0,
+                transitionDelay: "150ms",
               }}
             >
               <Calendar
@@ -114,17 +107,45 @@ export function LetsWorkTogether() {
                   transform: isButtonHovered ? "translate(3px, -3px) scale(1.1)" : "translate(0, 0) scale(1)",
                 }}
               />
-            </div>
+            </button>
 
-            {/* Right line */}
-            <div
-              className="h-px w-8 bg-border transition-all duration-500 sm:w-12"
+            {/* Get a Quote button */}
+            <button
+              onClick={handleGetQuote}
+              onMouseEnter={() => setIsQuoteButtonHovered(true)}
+              onMouseLeave={() => setIsQuoteButtonHovered(false)}
+              className="group relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4 cursor-pointer"
               style={{
-                transform: isButtonHovered ? "scaleX(0)" : "scaleX(1)",
-                opacity: isButtonHovered ? 0 : 0.5,
+                borderColor: isQuoteButtonHovered ? "var(--foreground)" : "var(--border)",
+                backgroundColor: isQuoteButtonHovered ? "var(--foreground)" : "transparent",
+                boxShadow: isQuoteButtonHovered ? "0 0 30px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.08)" : "none",
+                transform: showSuccess
+                  ? isQuoteButtonHovered
+                    ? "translateY(0) scale(1.02)"
+                    : "translateY(0) scale(1)"
+                  : "translateY(15px) scale(1)",
+                opacity: showSuccess ? 1 : 0,
+                transitionDelay: "200ms",
               }}
-            />
-          </button>
+            >
+              <span
+                className="text-sm font-medium tracking-wide transition-all duration-500 sm:text-base"
+                style={{
+                  color: isQuoteButtonHovered ? "var(--background)" : "var(--foreground)",
+                }}
+              >
+                Get a Quote
+              </span>
+              <ArrowUpRight
+                className="size-4 transition-all duration-500 sm:size-5"
+                strokeWidth={1.5}
+                style={{
+                  color: isQuoteButtonHovered ? "var(--background)" : "var(--foreground)",
+                  transform: isQuoteButtonHovered ? "translate(3px, -3px) scale(1.1)" : "translate(0, 0) scale(1)",
+                }}
+              />
+            </button>
+          </div>
         </div>
 
         <div
