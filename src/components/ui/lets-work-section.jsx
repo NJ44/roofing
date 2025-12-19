@@ -116,8 +116,8 @@ export function LetsWorkTogether() {
               onMouseLeave={() => setIsQuoteButtonHovered(false)}
               className="group relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4 cursor-pointer"
               style={{
-                borderColor: isQuoteButtonHovered ? "var(--foreground)" : "var(--border)",
-                backgroundColor: isQuoteButtonHovered ? "var(--foreground)" : "transparent",
+                borderColor: isQuoteButtonHovered ? "#000000" : "#000000",
+                backgroundColor: isQuoteButtonHovered ? "#1a1a1a" : "#000000",
                 boxShadow: isQuoteButtonHovered ? "0 0 30px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.08)" : "none",
                 transform: showSuccess
                   ? isQuoteButtonHovered
@@ -131,7 +131,7 @@ export function LetsWorkTogether() {
               <span
                 className="text-sm font-medium tracking-wide transition-all duration-500 sm:text-base"
                 style={{
-                  color: isQuoteButtonHovered ? "var(--background)" : "var(--foreground)",
+                  color: "#ffffff",
                 }}
               >
                 Get a Quote
@@ -140,7 +140,7 @@ export function LetsWorkTogether() {
                 className="size-4 transition-all duration-500 sm:size-5"
                 strokeWidth={1.5}
                 style={{
-                  color: isQuoteButtonHovered ? "var(--background)" : "var(--foreground)",
+                  color: "#ffffff",
                   transform: isQuoteButtonHovered ? "translate(3px, -3px) scale(1.1)" : "translate(0, 0) scale(1)",
                 }}
               />
@@ -157,8 +157,8 @@ export function LetsWorkTogether() {
           }}
         >
           <span className="relative flex size-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
+            <span className="relative inline-flex size-2 rounded-full bg-blue-500" />
           </span>
           <span className="text-sm font-medium tracking-widest uppercase text-muted-foreground">
             Book Your Next Visit

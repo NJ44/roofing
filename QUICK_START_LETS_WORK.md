@@ -101,3 +101,4 @@ If something isn't working:
 - Styles not applying → Clear cache and rebuild
 - Icons not showing → Check lucide-react is installed
 
+

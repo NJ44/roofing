@@ -10,6 +10,7 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import SEO from './components/SEO'
 import { LetsWorkTogether } from '@/components/ui/lets-work-section'
+import TeamSection from '@/components/ui/team-section'
 import GeneralDentistry from './pages/GeneralDentistry'
 import CosmeticWhitening from './pages/CosmeticWhitening'
 import SpecializedCare from './pages/SpecializedCare'
@@ -48,6 +49,7 @@ function HomePage() {
       <Hero />
       <Services />
       <MapEmbed />
+      <TeamSection />
       <Testimonials />
       <FAQ />
       <LetsWorkTogether />
