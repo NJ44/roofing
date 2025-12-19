@@ -28,7 +28,7 @@ export default function TeamSection() {
             <div className="mx-auto max-w-5xl px-6">
                 <div className="mt-12 gap-4 sm:grid sm:grid-cols-2 md:mt-24">
                     <div className="sm:w-2/5">
-                        <h2 className="text-3xl font-bold sm:text-4xl">Our dream team</h2>
+                        <h2 className="text-4xl font-bold">Our dream team</h2>
                     </div>
                     <div className="mt-6 sm:mt-0">
                         <p>During the working process, we perform regular fitting with the client because he is the only person who can feel whether a new suit fits or not.</p>

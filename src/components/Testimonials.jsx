@@ -105,7 +105,7 @@ const Testimonials = () => {
               Testimonials
             </div>
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 text-center">
+          <h2 className="text-4xl font-bold tracking-tighter mt-5 text-center">
             What our patients say
           </h2>
         </motion.div>

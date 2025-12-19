@@ -72,7 +72,7 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
-        <h2 className="text-3xl md:text-5xl lg:text-6xl mb-4 text-center font-bold" style={{ color: '#000000', opacity: 1, marginTop: '20px' }}>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-center font-bold" style={{ color: '#000000', opacity: 1, marginTop: '20px' }}>
           Our Services & Expertise
         </h2>
       </div>

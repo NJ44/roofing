@@ -90,6 +90,16 @@ html {
 [data-retell-widget],
 iframe[src*="retellai.com"] {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out !important;
+}
+
+/* Show widget after page loads */
+#retell-widget-container.widget-ready,
+[data-retell-widget].widget-ready {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* Style the widget button/bubble */

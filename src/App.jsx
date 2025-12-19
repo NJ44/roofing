@@ -70,14 +70,46 @@ function App() {
     }
   }, [])
 
-  // Resize Retell AI widget to make it smaller
+  // Resize Retell AI widget to make it smaller and show it after page loads
   useEffect(() => {
+    // Function to show widget after page is ready
+    const showWidgetWhenReady = () => {
+      const widgetContainer = document.getElementById('retell-widget-container') || 
+                              document.querySelector('[data-retell-widget]')
+      
+      if (widgetContainer) {
+        // Add class to show widget with transition
+        widgetContainer.classList.add('widget-ready')
+      }
+    }
+
+    // Wait for page to fully load before showing widget
+    const handlePageLoad = () => {
+      // Small delay to ensure all content is rendered
+      setTimeout(() => {
+        showWidgetWhenReady()
+      }, 500)
+    }
+
+    // Check if page is already loaded
+    if (document.readyState === 'complete') {
+      handlePageLoad()
+    } else {
+      window.addEventListener('load', handlePageLoad)
+    }
+
     const resizeRetellWidget = () => {
       // Find the widget container
       const widgetContainer = document.getElementById('retell-widget-container') || 
                               document.querySelector('[data-retell-widget]')
       
       if (widgetContainer) {
+        // Show widget if page is already loaded
+        if (document.readyState === 'complete' && !widgetContainer.classList.contains('widget-ready')) {
+          setTimeout(() => {
+            widgetContainer.classList.add('widget-ready')
+          }, 300)
+        }
         // Find iframe inside widget
         const iframe = widgetContainer.querySelector('iframe[src*="retellai.com"]') ||
                        widgetContainer.querySelector('iframe')
@@ -159,6 +191,7 @@ function App() {
     return () => {
       observer.disconnect()
       clearInterval(interval)
+      window.removeEventListener('load', handlePageLoad)
     }
   }, [])
 

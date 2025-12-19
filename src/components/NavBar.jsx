@@ -71,7 +71,7 @@ function NavBar({ className }) {
         className
       )}
     >
-      <Menu setActive={setActive} className="w-full">
+      <Menu setActive={setActive} className="w-full justify-between">
         {/* Logo - positioned on the left */}
         <Link to="/" className="flex items-center flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
           {config.LOGO_URL && !config.LOGO_URL.startsWith("{{") ? (
@@ -266,10 +266,10 @@ function NavBar({ className }) {
           </a>
         </div>
 
-        {/* Mobile Burger Menu Button */}
+        {/* Mobile Burger Menu Button - positioned on the right */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-800 hover:bg-gray-200 transition-colors"
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-800 hover:bg-gray-200 transition-colors ml-auto"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (

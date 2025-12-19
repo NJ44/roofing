@@ -30,7 +30,7 @@ const MapEmbed = () => {
         >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
           <p className="text-xl text-gray-600">
-            Visit our office in {config.CITY}
+            {config.BUSINESS_NAME} {config.ADDRESS_LINE}, {config.CITY}
           </p>
         </motion.div>
 
@@ -56,13 +56,6 @@ const MapEmbed = () => {
           </div>
 
           <div className="mt-6 text-center">
-            <p className="text-gray-700 mb-4">
-              <strong>{config.BUSINESS_NAME}</strong>
-              <br />
-              {config.ADDRESS_LINE}
-              <br />
-              {config.CITY}
-            </p>
             <a
               href={googleMapsUrl}
               target="_blank"
