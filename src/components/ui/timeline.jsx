@@ -72,7 +72,7 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl mb-4 text-center font-bold" style={{ color: '#000000', opacity: 1, marginTop: '20px' }}>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4 text-center font-bold" style={{ color: '#000000', opacity: 1, marginTop: '20px' }}>
           Our Services & Expertise
         </h2>
       </div>
@@ -92,12 +92,12 @@ export const Timeline = ({ data }) => {
                   style={{ width: 96, height: 96 }}
                 />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold transition-colors duration-300" style={{ color: '#0066CC', opacity: 1 }}>
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold transition-colors duration-300" style={{ color: '#000000', opacity: 1 }}>
                 {item.title}
               </h3>
             </div>
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold transition-colors duration-300" style={{ color: '#0066CC', opacity: 1 }}>
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold transition-colors duration-300" style={{ color: '#000000', opacity: 1 }}>
                 {item.title}
               </h3>
               {item.content}
