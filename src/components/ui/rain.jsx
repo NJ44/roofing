@@ -17,10 +17,10 @@ export function RainComponent() {
                 thunderEnabled={true}
                 thunderVolume={1}
                 thunderDelay={2}
-                className="bg-background relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-xl border bg-gradient-to-b from-zinc-950 via-zinc-800 to-zinc-950"
+                className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-xl border"
             >
                 <div className="p-6">
-                    <p className="z-10 text-white text-center text-3xl font-semibold tracking-tighter whitespace-pre-wrap md:text-7xl">
+                    <p className="z-10 text-gray-900 text-center text-3xl font-semibold tracking-tighter whitespace-pre-wrap md:text-7xl">
                         Reliable Protection <br /> Against the Storm
                     </p>
                 </div>
@@ -29,7 +29,7 @@ export function RainComponent() {
     )
 }
 
-function RainBackground({
+export function RainBackground({
     intensity = 100,
     speed = 1,
     color = "rgba(174, 194, 224, 0.6)",
