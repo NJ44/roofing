@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 
-const GeneralDentistry = () => {
+const BusinessLaw = () => {
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const GeneralDentistry = () => {
           />
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ const GeneralDentistry = () => {
           Business Law
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,14 +78,14 @@ const GeneralDentistry = () => {
         </div>
 
         {/* Services Section */}
-        <motion.div 
+        <motion.div
           className="mt-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ const GeneralDentistry = () => {
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Service 1 */}
-            <motion.div 
+            <motion.div
               className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const GeneralDentistry = () => {
                   Choosing the right business structure is one of the most important decisions you'll make as a business owner. Our attorneys guide clients through the process of forming corporations, limited liability companies (LLCs), partnerships, and other business entities, ensuring proper documentation and compliance with state and federal regulations. We help you understand the advantages and disadvantages of each structure, including liability protection, tax implications, and operational flexibility. Our comprehensive entity formation services include preparation of all necessary documents, filing with appropriate state agencies, obtaining required licenses and permits, and establishing proper corporate governance structures. We work closely with you to select the entity type that best fits your business goals, whether you're a sole proprietor looking to limit personal liability or a growing company planning for future expansion. Proper entity formation from the start can save you significant time and money down the road and protect your personal assets from business liabilities.
                 </p>
                 <Link
-                  to="/general-dentistry/routine-cleanings-exams"
+                  to="/business-law/entity-formation"
                   className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Learn More
@@ -123,7 +123,7 @@ const GeneralDentistry = () => {
             </motion.div>
 
             {/* Service 2 */}
-            <motion.div 
+            <motion.div
               className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +141,7 @@ const GeneralDentistry = () => {
                   Well-drafted contracts are the foundation of successful business relationships. Our attorneys have extensive experience drafting and reviewing a wide variety of business contracts, including employment agreements, vendor contracts, service agreements, non-disclosure agreements, licensing agreements, purchase agreements, and partnership agreements. We work to ensure that contracts protect your interests, clearly define rights and obligations, minimize potential disputes, and comply with applicable laws and regulations. Our contract services include initial drafting, review and revision of existing contracts, negotiation support, and contract dispute resolution. We understand that every contract is unique and requires careful consideration of your specific business needs and industry requirements. When disputes arise, we provide aggressive representation to enforce your rights and protect your business interests. Our goal is to help you enter into contracts with confidence, knowing that your interests are protected and your obligations are clearly defined.
                 </p>
                 <Link
-                  to="/general-dentistry/fillings-restorations"
+                  to="/business-law/contract-services"
                   className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Learn More
@@ -150,7 +150,7 @@ const GeneralDentistry = () => {
             </motion.div>
 
             {/* Service 3 */}
-            <motion.div 
+            <motion.div
               className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -168,7 +168,7 @@ const GeneralDentistry = () => {
                   Employment law compliance is essential for protecting your business from costly disputes and legal claims. Our employment law services include assistance with employment contracts, employee handbooks, workplace policies, discrimination and harassment prevention, wage and hour compliance, family and medical leave matters, and termination procedures. We help you maintain a compliant workplace while protecting your business from potential employment-related claims. Our services include drafting employment agreements that protect your business interests, developing comprehensive employee handbooks that clearly communicate workplace policies, providing guidance on hiring and termination procedures, and representing your business in employment disputes. We also provide training and guidance to help prevent employment disputes before they arise, including sexual harassment prevention training and compliance audits. When employment disputes do occur, we provide aggressive representation to defend your business and minimize liability. Our goal is to help you create a positive, compliant workplace that supports your business objectives while minimizing legal risk.
                 </p>
                 <Link
-                  to="/general-dentistry/root-canal-therapy"
+                  to="/business-law/employment-law"
                   className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Learn More
@@ -177,7 +177,7 @@ const GeneralDentistry = () => {
             </motion.div>
 
             {/* Service 4 */}
-            <motion.div 
+            <motion.div
               className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ const GeneralDentistry = () => {
                   Protecting your intellectual property is crucial for maintaining your competitive advantage and business value. Our intellectual property services include trademark registration and protection, copyright registration, trade secret protection, licensing agreements, and intellectual property dispute resolution. We help you identify and protect your valuable intellectual property assets, including business names, logos, product designs, proprietary information, and creative works. Our services include conducting trademark searches to ensure your marks are available, filing trademark and copyright applications with the appropriate government agencies, drafting licensing agreements that protect your rights while generating revenue, and enforcing your intellectual property rights against infringement. We also provide guidance on avoiding infringement of others' intellectual property rights, which is essential for protecting your business from costly disputes. Whether you're a startup with a new product or an established business looking to expand your intellectual property portfolio, we can help you develop a comprehensive strategy to protect and leverage your intellectual property assets.
                 </p>
                 <Link
-                  to="/general-dentistry/gum-disease-treatment"
+                  to="/business-law/intellectual-property"
                   className="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Learn More
@@ -209,4 +209,4 @@ const GeneralDentistry = () => {
   )
 }
 
-export default GeneralDentistry
+export default BusinessLaw

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { scrollToElement } from '../../hooks/useLenis'
 import { config } from '../../config'
 
-const DentalImplants = () => {
+const DuiDefense = () => {
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
@@ -49,7 +49,7 @@ const DentalImplants = () => {
             Free Consultation
           </a>
           <Link
-            to="/specialized-care"
+            to="/criminal-defense"
             className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-300 transition-colors"
           >
             ← Back to Criminal Defense
@@ -60,4 +60,4 @@ const DentalImplants = () => {
   )
 }
 
-export default DentalImplants
+export default DuiDefense

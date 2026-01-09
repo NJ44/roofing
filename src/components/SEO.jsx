@@ -12,63 +12,63 @@ const getPageMetadata = (pathname) => {
       title: `${baseTitle}`,
       description: `Experienced legal representation in ${city}. Business law, personal injury, criminal defense, and more. Free consultations available.`
     },
-    '/general-dentistry': {
+    '/business-law': {
       title: `Business Law Services in ${city} | ${baseTitle}`,
       description: `Expert business law services in ${city}. Entity formation, contracts, employment law, and intellectual property. Strategic legal counsel for your business.`
     },
-    '/cosmetic-whitening': {
+    '/personal-injury': {
       title: `Personal Injury Attorneys in ${city} | ${baseTitle}`,
       description: `Experienced personal injury lawyers in ${city}. Motor vehicle accidents, slip and fall, workplace injuries. Free consultation. Maximum compensation for your injuries.`
     },
-    '/specialized-care': {
+    '/criminal-defense': {
       title: `Criminal Defense Attorneys in ${city} | DUI, Drug Crimes & More | ${baseTitle}`,
       description: `Aggressive criminal defense representation in ${city}. DUI/DWI, drug crimes, assault, white-collar crimes. Free consultation. Protecting your rights and freedom.`
     },
-    '/general-dentistry/routine-cleanings-exams': {
+    '/business-law/entity-formation': {
       title: `Entity Formation Services in ${city} | ${baseTitle}`,
       description: `Business entity formation in ${city}. Corporations, LLCs, partnerships. Expert guidance on choosing the right business structure. Free consultation.`
     },
-    '/general-dentistry/fillings-restorations': {
+    '/business-law/contract-services': {
       title: `Contract Services in ${city} | ${baseTitle}`,
       description: `Expert contract drafting and review in ${city}. Employment agreements, vendor contracts, service agreements. Protect your business interests.`
     },
-    '/general-dentistry/root-canal-therapy': {
+    '/business-law/employment-law': {
       title: `Employment Law Services in ${city} | ${baseTitle}`,
       description: `Employment law counsel in ${city}. Employment contracts, workplace policies, compliance, and dispute resolution. Protect your business.`
     },
-    '/general-dentistry/gum-disease-treatment': {
+    '/business-law/intellectual-property': {
       title: `Intellectual Property Services in ${city} | ${baseTitle}`,
       description: `Intellectual property protection in ${city}. Trademarks, copyrights, trade secrets, and licensing. Protect your valuable business assets.`
     },
-    '/cosmetic-whitening/teeth-whitening': {
+    '/personal-injury/motor-vehicle-accidents': {
       title: `Motor Vehicle Accident Attorneys in ${city} | ${baseTitle}`,
       description: `Experienced car accident lawyers in ${city}. Maximum compensation for motor vehicle accidents. Free consultation. No fee unless we win.`
     },
-    '/cosmetic-whitening/dental-veneers': {
+    '/personal-injury/slip-and-fall': {
       title: `Slip and Fall Accident Lawyers in ${city} | ${baseTitle}`,
       description: `Premises liability attorneys in ${city}. Slip and fall accidents, property owner negligence. Free consultation. Recover compensation for your injuries.`
     },
-    '/cosmetic-whitening/dental-bonding': {
+    '/personal-injury/workplace-injuries': {
       title: `Workplace Injury Attorneys in ${city} | ${baseTitle}`,
       description: `Workplace injury lawyers in ${city}. Construction accidents, industrial injuries, workers' compensation. Free consultation.`
     },
-    '/cosmetic-whitening/smile-makeover': {
+    '/personal-injury/wrongful-death': {
       title: `Wrongful Death Attorneys in ${city} | ${baseTitle}`,
       description: `Compassionate wrongful death representation in ${city}. Hold negligent parties accountable. Free consultation. Financial support for your family.`
     },
-    '/specialized-care/dental-implants': {
+    '/criminal-defense/dui-defense': {
       title: `DUI/DWI Defense Attorneys in ${city} | ${baseTitle}`,
       description: `Experienced DUI/DWI defense lawyers in ${city}. Protect your license and minimize consequences. Free consultation. Aggressive defense representation.`
     },
-    '/specialized-care/emergency-care': {
+    '/criminal-defense/drug-crimes': {
       title: `Drug Crime Defense Attorneys in ${city} | ${baseTitle}`,
       description: `Criminal defense for drug charges in ${city}. Possession, distribution, trafficking. Free consultation. Protect your rights and freedom.`
     },
-    '/specialized-care/orthodontics': {
+    '/criminal-defense/violent-crimes': {
       title: `Assault & Violent Crime Defense in ${city} | ${baseTitle}`,
       description: `Aggressive defense for assault and violent crime charges in ${city}. Self-defense, false accusations. Free consultation. Protect your future.`
     },
-    '/specialized-care/periodontal-treatment': {
+    '/criminal-defense/white-collar-crimes': {
       title: `White-Collar Crime Defense in ${city} | ${baseTitle}`,
       description: `Expert white-collar crime defense in ${city}. Fraud, embezzlement, money laundering. Free consultation. Protect your reputation and freedom.`
     },

@@ -8,10 +8,9 @@ const footerLinks = [
   {
     label: 'Services',
     links: [
-      { title: 'General Dentistry', href: '#services' },
-      { title: 'Cosmetic & Whitening', href: '#services' },
-      { title: 'Dental Implants', href: '#services' },
-      { title: 'Emergency Care', href: '#services' },
+      { title: 'Business Law', href: '/business-law' },
+      { title: 'Personal Injury', href: '/personal-injury' },
+      { title: 'Criminal Defense', href: '/criminal-defense' },
     ],
   },
   {
@@ -26,10 +25,10 @@ const footerLinks = [
   {
     label: 'Resources',
     links: [
-      { title: 'Patient Reviews', href: '#reviews' },
+      { title: 'Client Reviews', href: '#reviews' },
       { title: 'Location', href: '#contact' },
       { title: 'Contact Us', href: '#contact' },
-      { title: 'Book Appointment', href: '#contact' },
+      { title: 'Schedule Consultation', href: '#contact' },
       { title: 'Blog', href: '/blog' },
     ],
   },
@@ -74,45 +73,45 @@ export function FooterSection() {
 
       <div className="container mx-auto max-w-7xl px-6 w-full">
         <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
-        <AnimatedContainer className="space-y-4">
-          <Heart className="size-8 text-white" />
-          <p className="text-gray-400 mt-8 text-sm md:mt-0">
-            © {new Date().getFullYear()} {config.BUSINESS_NAME}. All rights reserved.
-          </p>
-        </AnimatedContainer>
+          <AnimatedContainer className="space-y-4">
+            <Heart className="size-8 text-white" />
+            <p className="text-gray-400 mt-8 text-sm md:mt-0">
+              © {new Date().getFullYear()} {config.BUSINESS_NAME}. All rights reserved.
+            </p>
+          </AnimatedContainer>
 
-        <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
-          {footerLinks.map((section, index) => (
-            <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
-              <div className="mb-10 md:mb-0">
-                <h3 className="text-xs text-white font-semibold">{section.label}</h3>
-                <ul className="text-gray-400 mt-4 space-y-2 text-sm">
-                  {section.links.map((link) => {
-                    const Icon = link.icon;
-                    const isExternal = link.href.startsWith('#') || link.href.startsWith('http');
-                    const LinkComponent = isExternal ? 'a' : Link;
-                    const linkProps = isExternal 
-                      ? { href: link.href }
-                      : { to: link.href };
-                    
-                    return (
-                      <li key={link.title}>
-                        <LinkComponent
-                          {...linkProps}
-                          className="hover:text-white inline-flex items-center transition-all duration-300"
-                        >
-                          {Icon && <Icon className="me-1 size-4" />}
-                          {link.title}
-                        </LinkComponent>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </AnimatedContainer>
-          ))}
+          <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
+            {footerLinks.map((section, index) => (
+              <AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
+                <div className="mb-10 md:mb-0">
+                  <h3 className="text-xs text-white font-semibold">{section.label}</h3>
+                  <ul className="text-gray-400 mt-4 space-y-2 text-sm">
+                    {section.links.map((link) => {
+                      const Icon = link.icon;
+                      const isExternal = link.href.startsWith('#') || link.href.startsWith('http');
+                      const LinkComponent = isExternal ? 'a' : Link;
+                      const linkProps = isExternal
+                        ? { href: link.href }
+                        : { to: link.href };
+
+                      return (
+                        <li key={link.title}>
+                          <LinkComponent
+                            {...linkProps}
+                            className="hover:text-white inline-flex items-center transition-all duration-300"
+                          >
+                            {Icon && <Icon className="me-1 size-4" />}
+                            {link.title}
+                          </LinkComponent>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </AnimatedContainer>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </footer>
   );

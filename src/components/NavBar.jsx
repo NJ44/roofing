@@ -112,45 +112,45 @@ function NavBar({ className }) {
             <div className="text-sm grid grid-cols-2 gap-6 p-4">
               <ProductItem
                 title="Business Law"
-                href="/general-dentistry"
+                href="/business-law"
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
                 description="Corporate law, contracts, and business formation"
-                onClick={() => handleLinkClick("/general-dentistry")}
+                onClick={() => handleLinkClick("/business-law")}
               />
               <ProductItem
                 title="Personal Injury"
-                href="/cosmetic-whitening"
+                href="/personal-injury"
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
                 description="Accident claims and injury compensation"
-                onClick={() => handleLinkClick("/cosmetic-whitening")}
+                onClick={() => handleLinkClick("/personal-injury")}
               />
               <ProductItem
                 title="Criminal Defense"
-                href="/specialized-care"
+                href="/criminal-defense"
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
                 description="Aggressive defense for all criminal charges"
-                onClick={() => handleLinkClick("/specialized-care")}
+                onClick={() => handleLinkClick("/criminal-defense")}
               />
               <ProductItem
                 title="Family Law"
-                href="/specialized-care"
+                href="/criminal-defense"
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
                 description="Divorce, custody, and family legal matters"
-                onClick={() => handleLinkClick("/specialized-care")}
+                onClick={() => handleLinkClick("/criminal-defense")}
               />
               <ProductItem
                 title="Estate Planning"
-                href="/specialized-care"
+                href="/business-law"
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=200&h=120&fit=crop"
                 description="Wills, trusts, and estate administration"
-                onClick={() => handleLinkClick("/specialized-care")}
+                onClick={() => handleLinkClick("/business-law")}
               />
               <ProductItem
                 title="Real Estate Law"
-                href="/specialized-care"
+                href="/business-law"
                 src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=200&h=120&fit=crop"
                 description="Property transactions and real estate disputes"
-                onClick={() => handleLinkClick("/specialized-care")}
+                onClick={() => handleLinkClick("/business-law")}
               />
             </div>
           </MenuItem>
@@ -202,7 +202,7 @@ function NavBar({ className }) {
 
         {/* Desktop Language Switcher and Book Now Button - hidden on mobile */}
         <div className="hidden md:flex items-center ml-auto gap-3" style={{ transform: 'translateX(20px)' }}>
-          <div 
+          <div
             ref={languageDropdownRef}
             className="relative"
             onMouseEnter={() => setIsLanguageDropdownOpen(true)}
@@ -216,7 +216,7 @@ function NavBar({ className }) {
               <ChevronDown className="w-4 h-4" />
             </button>
             {isLanguageDropdownOpen && (
-              <div 
+              <div
                 className="absolute top-full right-0 pt-1 bg-transparent"
                 onMouseEnter={() => setIsLanguageDropdownOpen(true)}
                 onMouseLeave={() => setIsLanguageDropdownOpen(false)}
@@ -292,30 +292,30 @@ function NavBar({ className }) {
               <h3 className="text-lg font-semibold text-black mb-3">{t.nav.services}</h3>
               <div className="space-y-2">
                 <a
-                  href="/general-dentistry"
+                  href="/business-law"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/general-dentistry"));
+                    handleMobileLinkClick(() => handleLinkClick("/business-law"));
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
                   Business Law
                 </a>
                 <a
-                  href="/cosmetic-whitening"
+                  href="/personal-injury"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/cosmetic-whitening"));
+                    handleMobileLinkClick(() => handleLinkClick("/personal-injury"));
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
                   Personal Injury
                 </a>
                 <a
-                  href="/specialized-care"
+                  href="/criminal-defense"
                   onClick={(e) => {
                     e.preventDefault();
-                    handleMobileLinkClick(() => handleLinkClick("/specialized-care"));
+                    handleMobileLinkClick(() => handleLinkClick("/criminal-defense"));
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
@@ -431,7 +431,7 @@ function NavBar({ className }) {
                   onClick={() => {
                     setLanguage('es');
                     setIsMobileMenuOpen(false);
-                }}
+                  }}
                   className={cn(
                     "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
                     language === 'es' ? "border-primary bg-primary/5" : "border-gray-200"

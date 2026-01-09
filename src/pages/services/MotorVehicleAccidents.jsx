@@ -4,7 +4,7 @@ import { InteractiveHoverButton } from '../../components/ui/interactive-hover-bu
 import { scrollToElement } from '../../hooks/useLenis'
 import { config } from '../../config'
 
-const TeethWhitening = () => {
+const MotorVehicleAccidents = () => {
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
@@ -50,7 +50,7 @@ const TeethWhitening = () => {
             Free Consultation
           </a>
           <Link
-            to="/cosmetic-whitening"
+            to="/personal-injury"
             className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-300 transition-colors"
           >
             ← Back to Personal Injury
@@ -61,4 +61,4 @@ const TeethWhitening = () => {
   )
 }
 
-export default TeethWhitening
+export default MotorVehicleAccidents

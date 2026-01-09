@@ -98,9 +98,9 @@ const VoiceWidget = () => {
       // Step 2: Initialize Retell client
       console.log('Initializing Retell client...')
       const client = new RetellWebClient()
-      
+
       console.log('Client methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(client)))
-      
+
       await client.startCall({
         accessToken: access_token,
         callId: call_id,
@@ -182,9 +182,8 @@ const VoiceWidget = () => {
       {/* Voice Widget Button */}
       <button
         onClick={toggleWidget}
-        className={`fixed bottom-6 right-6 z-[60] flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-2xl transition-all duration-500 ease-out hover:shadow-blue-500/50 hover:scale-110 active:scale-95 ${
-          isOpen ? 'rotate-90 opacity-0 pointer-events-none' : 'rotate-0 opacity-100'
-        }`}
+        className={`fixed bottom-6 right-6 z-[60] flex items-center justify-center w-16 h-16 rounded-full bg-black text-white shadow-2xl transition-all duration-500 ease-out hover:shadow-gray-500/50 hover:scale-110 active:scale-95 ${isOpen ? 'rotate-90 opacity-0 pointer-events-none' : 'rotate-0 opacity-100'
+          }`}
         aria-label="Open voice widget"
       >
         <Phone className="w-7 h-7" strokeWidth={2} />
@@ -192,22 +191,21 @@ const VoiceWidget = () => {
 
       {/* Voice Widget Panel */}
       <div
-        className={`fixed bottom-6 right-6 z-[60] transition-all duration-500 ease-out ${
-          isOpen
+        className={`fixed bottom-6 right-6 z-[60] transition-all duration-500 ease-out ${isOpen
             ? 'opacity-100 scale-100 translate-y-0'
             : 'opacity-0 scale-95 translate-y-4 pointer-events-none'
-        }`}
+          }`}
       >
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden min-w-[320px]">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 flex items-center justify-between">
+          <div className="bg-black px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <Phone className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
               <div>
-                <h3 className="text-white font-semibold text-base">Voice Assistant</h3>
-                <p className="text-blue-100 text-xs">
+                <h3 className="text-white font-semibold text-base">Legal Assistant</h3>
+                <p className="text-gray-300 text-xs">
                   {isCalling ? 'Call in progress' : 'Tap to speak'}
                 </p>
               </div>
@@ -224,11 +222,11 @@ const VoiceWidget = () => {
           {/* Content */}
           <div className="p-6">
             <div className="flex flex-col items-center gap-4">
-              {/* Receptionist Image */}
+              {/* Lawyer Image */}
               <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop"
-                  alt="Receptionist"
+                  src="/lawyer_avatar.png"
+                  alt="Lawyer"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -244,11 +242,10 @@ const VoiceWidget = () => {
               <button
                 onClick={handleCall}
                 disabled={isCalling && !retellClient}
-                className={`w-full py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 ${
-                  isCalling
+                className={`w-full py-3 px-4 rounded-lg font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 ${isCalling
                     ? 'bg-red-500 hover:bg-red-600 text-white'
-                    : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white'
-                }`}
+                    : 'bg-black hover:bg-gray-800 text-white'
+                  }`}
               >
                 {isCalling ? (
                   <>

@@ -5,11 +5,11 @@ import { InteractiveHoverButton } from '../../components/ui/interactive-hover-bu
 import { scrollToElement } from '../../hooks/useLenis'
 import { config } from '../../config'
 
-const RoutineCleaningsExams = () => {
+const EntityFormation = () => {
   return (
     <div className="min-h-screen bg-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const RoutineCleaningsExams = () => {
           />
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const RoutineCleaningsExams = () => {
           Entity Formation
         </motion.h1>
 
-        <motion.div 
+        <motion.div
           className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ const RoutineCleaningsExams = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="mt-8 flex gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const RoutineCleaningsExams = () => {
             Schedule a Consultation
           </a>
           <Link
-            to="/general-dentistry"
+            to="/business-law"
             className="inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-semibold hover:bg-gray-300 transition-colors"
           >
             ← Back to Business Law
@@ -86,4 +86,4 @@ const RoutineCleaningsExams = () => {
   )
 }
 
-export default RoutineCleaningsExams
+export default EntityFormation

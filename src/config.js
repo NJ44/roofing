@@ -1,22 +1,22 @@
 // CLIENT VARIABLES - Replace these with actual values
 export const config = {
-  BUSINESS_NAME: "Law Firm",
-  TAGLINE: "{{TAGLINE}}", // e.g., "Experienced legal representation near you"
-  PRIMARY_COLOR: "{{PRIMARY_COLOR}}", // hex color, e.g., "#1a1a2e"
-  ACCENT_COLOR: "{{ACCENT_COLOR}}", // hex color, e.g., "#c9a961"
-  ADDRESS_LINE: "123 Main Street",
-  CITY: "California",
-  PHONE: "0546728171",
-  EMAIL: "info@lawfirm.com",
-  LOGO_URL: "{{LOGO_URL}}", // optional
-  GOOGLE_MAP_EMBED_SRC: "{{GOOGLE_MAP_IFRAME_SRC}}",
+  BUSINESS_NAME: "Apex Legal Group",
+  TAGLINE: "Experienced legal representation when you need it most", // e.g., "Experienced legal representation near you"
+  PRIMARY_COLOR: "#1a1a2e", // hex color, e.g., "#1a1a2e"
+  ACCENT_COLOR: "#c9a961", // hex color, e.g., "#c9a961"
+  ADDRESS_LINE: "123 Legal Ave, Suite 100",
+  CITY: "Los Angeles, CA",
+  PHONE: "555-0123",
+  EMAIL: "contact@apexlegal.com",
+  LOGO_URL: "", // optional
+  GOOGLE_MAP_EMBED_SRC: "",
   GOOGLE_REVIEWS_DATA: null, // Will be set from {{REVIEWS_JSON}} or use sample data
-  FORM_WEBHOOK_URL: "{{FORM_WEBHOOK_URL}}",
-  GOOGLE_BUSINESS_PROFILE_URL: "{{GOOGLE_BUSINESS_PROFILE_URL}}", // optional
+  FORM_WEBHOOK_URL: "",
+  GOOGLE_BUSINESS_PROFILE_URL: "", // optional
   LOCATIONS: [
-    { name: "Main Office", slug: "main-office", address: "123 Main Street", city: "Los Angeles", phone: "0546728171" },
-    { name: "Downtown Branch", slug: "downtown-branch", address: "456 Oak Avenue", city: "San Francisco", phone: "0546728172" },
-    { name: "Westside Office", slug: "westside-office", address: "789 Beach Boulevard", city: "San Diego", phone: "0546728173" }
+    { name: "Main Office", slug: "main-office", address: "123 Legal Ave, Suite 100", city: "Los Angeles", phone: "555-0123" },
+    { name: "Downtown Branch", slug: "downtown-branch", address: "456 Oak Avenue", city: "San Francisco", phone: "555-0124" },
+    { name: "Westside Office", slug: "westside-office", address: "789 Beach Boulevard", city: "San Diego", phone: "555-0125" }
   ]
 };
 

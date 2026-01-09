@@ -1,41 +1,40 @@
 import React, { useState } from 'react'
-import LeadForm from './LeadForm'
 import { scrollToElement } from '../hooks/useLenis'
 import { config } from '../config'
 import { useTranslation } from '../hooks/useTranslation'
 
 const Hero = () => {
   const { t } = useTranslation();
-  
+
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-white pt-20"
+      className="relative min-h-screen flex items-center pt-20"
       style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80)',
+        backgroundImage: 'url(/lawyer_office_hero_standing.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       {/* Overlay - lighter for black text visibility */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/80 to-white/60"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent"></div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
+        <div className="max-w-3xl">
+          {/* Text Content */}
           <div className="text-black space-y-4 animate-fade-in">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black">
               Experienced Legal Representation for Your Rights
             </h1>
-            <h2 className="text-lg md:text-xl lg:text-2xl text-black font-normal">
+            <h2 className="text-xl md:text-2xl text-black font-normal max-w-2xl">
               Proven results, dedicated advocacy, and a team that fights for you.
             </h2>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 pt-6">
               <a
                 href="#contact"
-                className="bg-primary text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
+                className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-opacity-90 transition-colors text-center shadow-lg"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('#contact', { offset: -100 });
@@ -45,7 +44,7 @@ const Hero = () => {
               </a>
               <a
                 href="#services"
-                className="bg-white text-primary px-6 py-3 rounded-full font-semibold text-base hover:bg-opacity-90 transition-colors text-center"
+                className="bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-colors text-center shadow-md border border-gray-100"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('#services', { offset: -100 });
@@ -54,11 +53,6 @@ const Hero = () => {
                 {t.hero.ourServices}
               </a>
             </div>
-          </div>
-
-          {/* Right Column - Lead Form */}
-          <div className="animate-fade-in-delay">
-            <LeadForm />
           </div>
         </div>
       </div>
