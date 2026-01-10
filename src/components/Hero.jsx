@@ -17,8 +17,8 @@ const Hero = () => {
       }}
     >
       <RainBackground
-        intensity={300}
-        speed={1}
+        intensity={100}
+        speed={0.5}
         color="rgba(255, 255, 255, 0.4)"
         className="absolute inset-0 w-full h-full z-0"
         lightningEnabled={true}
@@ -29,7 +29,7 @@ const Hero = () => {
         {/* Overlay - darker for white text visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent pointer-events-none z-0"></div>
 
-        <div className="container mx-auto px-4 py-16 relative z-10 h-full flex items-center">
+        <div className="container mx-auto px-4 pb-24 md:pb-32 relative z-10 h-full flex items-end">
           <div className="max-w-3xl">
             {/* Text Content */}
             <div className="text-white space-y-4 animate-fade-in">

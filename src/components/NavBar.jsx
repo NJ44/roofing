@@ -1,22 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu as MenuIcon, X, Languages, ChevronDown } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
 import { scrollToElement } from "../hooks/useLenis";
 import { cn } from "../lib/utils";
 import { config } from "../config";
-import { useLanguage } from "../contexts/LanguageContext";
+
 import { useTranslation } from "../hooks/useTranslation";
 
 function NavBar({ className }) {
   const [active, setActive] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const navigate = useNavigate();
-  const { language, setLanguage } = useLanguage();
   const { t } = useTranslation();
-  const languageDropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,22 +23,6 @@ function NavBar({ className }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close language dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target)) {
-        setIsLanguageDropdownOpen(false);
-      }
-    };
-
-    if (isLanguageDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isLanguageDropdownOpen]);
 
   const scrollToSection = (href) => {
     if (href.startsWith('#')) {
@@ -186,56 +167,8 @@ function NavBar({ className }) {
           </a>
         </div>
 
-        {/* Desktop Language Switcher and Book Now Button - hidden on mobile */}
-        <div className="hidden md:flex items-center ml-auto gap-3" style={{ transform: 'translateX(20px)' }}>
-          <div
-            ref={languageDropdownRef}
-            className="relative"
-            onMouseEnter={() => setIsLanguageDropdownOpen(true)}
-            onMouseLeave={() => setIsLanguageDropdownOpen(false)}
-          >
-            <button
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg font-medium text-sm text-black hover:bg-gray-100 transition-colors"
-              aria-label="Language selector"
-            >
-              <span>{language === 'en' ? 'EN' : 'ES'}</span>
-              <ChevronDown className="w-4 h-4" />
-            </button>
-            {isLanguageDropdownOpen && (
-              <div
-                className="absolute top-full right-0 pt-1 bg-transparent"
-                onMouseEnter={() => setIsLanguageDropdownOpen(true)}
-                onMouseLeave={() => setIsLanguageDropdownOpen(false)}
-              >
-                <div className="bg-white rounded-lg shadow-lg border border-gray-200 min-w-[120px] z-50">
-                  <button
-                    onClick={() => {
-                      setLanguage('en');
-                      setIsLanguageDropdownOpen(false);
-                    }}
-                    className={cn(
-                      "w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors first:rounded-t-lg last:rounded-b-lg",
-                      language === 'en' && "bg-gray-50 font-semibold"
-                    )}
-                  >
-                    EN
-                  </button>
-                  <button
-                    onClick={() => {
-                      setLanguage('es');
-                      setIsLanguageDropdownOpen(false);
-                    }}
-                    className={cn(
-                      "w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors first:rounded-t-lg last:rounded-b-lg",
-                      language === 'es' && "bg-gray-50 font-semibold"
-                    )}
-                  >
-                    ES
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
+        {/* Desktop Book Now Button */}
+        <div className="hidden md:flex items-center ml-auto gap-3">
           <a
             href="#appointment-form"
             onClick={(e) => {
@@ -398,35 +331,7 @@ function NavBar({ className }) {
               </div>
             </div>
 
-            {/* Mobile Language Switcher */}
-            <div className="pt-2">
-              <div className="space-y-2">
-                <button
-                  onClick={() => {
-                    setLanguage('en');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={cn(
-                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
-                    language === 'en' ? "border-primary bg-primary/5" : "border-gray-200"
-                  )}
-                >
-                  <span>EN</span>
-                </button>
-                <button
-                  onClick={() => {
-                    setLanguage('es');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={cn(
-                    "flex items-center gap-2 w-full px-4 py-3 rounded-lg font-medium text-black hover:bg-gray-100 transition-colors border",
-                    language === 'es' ? "border-primary bg-primary/5" : "border-gray-200"
-                  )}
-                >
-                  <span>ES</span>
-                </button>
-              </div>
-            </div>
+
 
             {/* Mobile Book Now Button */}
             <div className="pt-4">

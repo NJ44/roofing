@@ -34,7 +34,6 @@ function HomePage() {
     <>
       <Hero />
       <Services />
-      <MapEmbed />
       <TeamSection />
       <Testimonials />
       <FAQ />

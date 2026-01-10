@@ -35,6 +35,7 @@ const Services = () => {
   return (
     <section id="services" className="w-full bg-white py-20 px-4 md:px-8">
       <div className="max-w-7xl mx-auto space-y-24">
+        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
         {services.map((service) => (
           <div key={service.index} className="flex justify-center">
             <FeaturedSpotlight
@@ -43,7 +44,7 @@ const Services = () => {
               description={service.description}
               imageUrl={service.imageUrl}
               index={service.index}
-              label="Practice Area"
+              label="Services"
               onLearnMore={() => navigate(service.link)}
             />
           </div>
