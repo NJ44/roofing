@@ -78,7 +78,7 @@ function NavBar({ className }) {
                     key={index}
                     title={location.name}
                     href={`/locations/${location.slug}`}
-                    src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=200&h=120&fit=crop"
+                    src={location.image}
                     description={`${location.address}, ${location.city}`}
                     onClick={() => handleLinkClick(`/locations/${location.slug}`)}
                   />
@@ -110,6 +110,14 @@ function NavBar({ className }) {
                 href="#"
                 src="/commercial-roofing.png"
                 description="Business and industrial roofing"
+                onClick={() => handleLinkClick("/contact")}
+                className="hidden" // Hiding commercial for now based on user request
+              />
+              <ProductItem
+                title="Storm Restoration"
+                href="#"
+                src="/storm-damage.png"
+                description="Insurance claim assistance"
                 onClick={() => handleLinkClick("/contact")}
               />
               <ProductItem
@@ -238,7 +246,7 @@ function NavBar({ className }) {
                   }}
                   className="block py-2 text-black hover:text-primary transition-colors"
                 >
-                  Commercial Roofing
+                  Storm Restoration
                 </a>
               </div>
             </div>

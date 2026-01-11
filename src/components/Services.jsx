@@ -9,7 +9,7 @@ const Services = () => {
     {
       titlePrefix: "Roof",
       titleSuffix: "Repair",
-      description: "Fast and reliable repairs for leaks, storm damage, and wear and tear. We restore your roof's integrity quickly and efficiently.",
+      description: "Fast response for leaks, missing shingles, and wear. We restore your home's protection and curb appeal efficiently.",
       imageUrl: "/roof-repair.png",
       index: "01",
       link: "/contact"
@@ -17,16 +17,16 @@ const Services = () => {
     {
       titlePrefix: "Roof",
       titleSuffix: "Replacement",
-      description: "Complete roof replacement services using high-quality shingles, metal, or tile. Enhance your home's curb appeal and protection.",
+      description: "Full residential roof replacements with premium asphalt, metal, or tile options. Lifetime warranties available.",
       imageUrl: "/roof-replacement.png",
       index: "02",
       link: "/contact"
     },
     {
-      titlePrefix: "Commercial",
-      titleSuffix: "Roofing",
-      description: "Expert roofing solutions for businesses and industrial properties. Flat roofs, TPO, EPDM, and metal roofing systems.",
-      imageUrl: "/commercial-roofing.png",
+      titlePrefix: "Storm",
+      titleSuffix: "Restoration",
+      description: "Expert damage assessment and restoration after severe weather. We help navigate insurance claims for your peace of mind.",
+      imageUrl: "/storm-damage.png",
       index: "03",
       link: "/contact"
     }

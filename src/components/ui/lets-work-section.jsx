@@ -72,9 +72,9 @@ export function LetsWorkTogether() {
               onMouseLeave={() => setIsButtonHovered(false)}
               className="group relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4 cursor-pointer"
               style={{
-                borderColor: isButtonHovered ? "var(--foreground)" : "var(--border)",
-                backgroundColor: isButtonHovered ? "var(--foreground)" : "transparent",
-                boxShadow: isButtonHovered ? "0 0 30px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.08)" : "none",
+                borderColor: isButtonHovered ? "var(--primary-color)" : "var(--border)",
+                backgroundColor: isButtonHovered ? "var(--primary-color)" : "transparent",
+                boxShadow: isButtonHovered ? "0 0 30px rgba(234, 88, 12, 0.2), 0 10px 40px rgba(234, 88, 12, 0.1)" : "none",
                 transform: showSuccess
                   ? isButtonHovered
                     ? "translateY(0) scale(1.02)"
@@ -88,13 +88,13 @@ export function LetsWorkTogether() {
                 className="size-4 transition-all duration-500 sm:size-5"
                 strokeWidth={1.5}
                 style={{
-                  color: isButtonHovered ? "var(--background)" : "var(--foreground)",
+                  color: isButtonHovered ? "#ffffff" : "var(--foreground)",
                 }}
               />
               <span
                 className="text-sm font-medium tracking-wide transition-all duration-500 sm:text-base"
                 style={{
-                  color: isButtonHovered ? "var(--background)" : "var(--foreground)",
+                  color: isButtonHovered ? "#ffffff" : "var(--foreground)",
                 }}
               >
                 Schedule Inspection
@@ -103,7 +103,7 @@ export function LetsWorkTogether() {
                 className="size-4 transition-all duration-500 sm:size-5"
                 strokeWidth={1.5}
                 style={{
-                  color: isButtonHovered ? "var(--background)" : "var(--foreground)",
+                  color: isButtonHovered ? "#ffffff" : "var(--foreground)",
                   transform: isButtonHovered ? "translate(3px, -3px) scale(1.1)" : "translate(0, 0) scale(1)",
                 }}
               />
@@ -116,9 +116,9 @@ export function LetsWorkTogether() {
               onMouseLeave={() => setIsQuoteButtonHovered(false)}
               className="group relative flex items-center gap-3 overflow-hidden rounded-full border px-6 py-3 transition-all duration-500 sm:px-8 sm:py-4 cursor-pointer"
               style={{
-                borderColor: isQuoteButtonHovered ? "#000000" : "#000000",
-                backgroundColor: isQuoteButtonHovered ? "#1a1a1a" : "#000000",
-                boxShadow: isQuoteButtonHovered ? "0 0 30px rgba(0,0,0,0.1), 0 10px 40px rgba(0,0,0,0.08)" : "none",
+                borderColor: isQuoteButtonHovered ? "#c2410c" : "var(--primary-color)",
+                backgroundColor: isQuoteButtonHovered ? "#c2410c" : "var(--primary-color)",
+                boxShadow: isQuoteButtonHovered ? "0 0 30px rgba(234, 88, 12, 0.3), 0 10px 40px rgba(234, 88, 12, 0.1)" : "none",
                 transform: showSuccess
                   ? isQuoteButtonHovered
                     ? "translateY(0) scale(1.02)"
@@ -199,7 +199,7 @@ export function LetsWorkTogether() {
                     transform: isHovered && !isClicked ? "translateY(-8%)" : "translateY(0)",
                   }}
                 >
-                  <span className="text-muted-foreground/60">Inspection</span>
+                  <span className="text-[var(--primary-color)]">Inspection</span>
                 </span>
               </span>
             </h2>
@@ -233,8 +233,9 @@ export function LetsWorkTogether() {
 
           <div className="absolute -left-8 top-1/2 -translate-y-1/2 sm:-left-16">
             <div
-              className="h-px w-8 bg-border transition-all duration-500 sm:w-12"
+              className="h-px w-8 transition-all duration-500 sm:w-12"
               style={{
+                backgroundColor: isHovered ? "var(--primary-color)" : "hsl(var(--border))",
                 transform: isClicked ? "scaleX(0) translateX(-20px)" : isHovered ? "scaleX(1.5)" : "scaleX(1)",
                 opacity: isClicked ? 0 : isHovered ? 1 : 0.5,
               }}
@@ -242,8 +243,9 @@ export function LetsWorkTogether() {
           </div>
           <div className="absolute -right-8 top-1/2 -translate-y-1/2 sm:-right-16">
             <div
-              className="h-px w-8 bg-border transition-all duration-500 sm:w-12"
+              className="h-px w-8 transition-all duration-500 sm:w-12"
               style={{
+                backgroundColor: isHovered ? "var(--primary-color)" : "hsl(var(--border))",
                 transform: isClicked ? "scaleX(0) translateX(20px)" : isHovered ? "scaleX(1.5)" : "scaleX(1)",
                 opacity: isClicked ? 0 : isHovered ? 1 : 0.5,
               }}

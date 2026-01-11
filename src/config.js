@@ -14,9 +14,9 @@ export const config = {
   FORM_WEBHOOK_URL: "",
   GOOGLE_BUSINESS_PROFILE_URL: "", // optional
   LOCATIONS: [
-    { name: "Main Office", slug: "main-office", address: "123 Roofing Way", city: "Newark", phone: "555-0123" },
-    { name: "North Jersey", slug: "north-jersey", address: "456 Summit Ave", city: "Jersey City", phone: "555-0124" },
-    { name: "Central Jersey", slug: "central-jersey", address: "789 Beach Blvd", city: "Old Bridge", phone: "555-0125" }
+    { name: "Main Office", slug: "main-office", address: "123 Roofing Way", city: "Newark", phone: "555-0123", image: "/location-main.png" },
+    { name: "North Jersey", slug: "north-jersey", address: "456 Summit Ave", city: "Jersey City", phone: "555-0124", image: "/location-north.png" },
+    { name: "Central Jersey", slug: "central-jersey", address: "789 Beach Blvd", city: "Old Bridge", phone: "555-0125", image: "/location-central.png" }
   ]
 };
 

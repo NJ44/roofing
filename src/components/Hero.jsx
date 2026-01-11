@@ -27,7 +27,7 @@ const Hero = () => {
         contentClassName="h-full w-full"
       >
         {/* Overlay - darker for white text visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-transparent pointer-events-none z-0"></div>
+        <div className="absolute inset-0 bg-slate-900/70 md:bg-transparent md:bg-gradient-to-r md:from-slate-900/90 md:via-slate-900/70 md:to-transparent pointer-events-none z-0"></div>
 
         <div className="container mx-auto px-4 pb-24 md:pb-32 relative z-10 h-full flex items-end">
           <div className="max-w-3xl">
